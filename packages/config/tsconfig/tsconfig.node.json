@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig", // 指定JSON模式的URL
+  "extends": "./tsconfig.base.json", // 继承基础配置文件
+  "compilerOptions": {
+    "module": "commonjs" // 指定生成的模块代码类型为CommonJS
+  },
+  "ts-node": {
+    "swc": true // 使用SWC编译器替代TypeScript编译器
+  }
+}

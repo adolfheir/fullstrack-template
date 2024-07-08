@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "strict": true, // 启用所有严格类型检查选项
+    "strictNullChecks": true, // 严格的空值检查
+    "composite": true, // 允许项目的增量编译
+    "lib": ["ESNext", "DOM"], // 指定要包含在编译中的库文件
+    "module": "ESNext", // 指定生成的模块代码类型
+    "target": "ESNext", // 指定ECMAScript目标版本
+    "resolveJsonModule": true, // 允许导入JSON模块
+    "esModuleInterop": true, // 启用对ES模块互操作性的支持
+    "forceConsistentCasingInFileNames": true, // 强制文件名的一致性大小写
+    "strictPropertyInitialization": true, // 类属性严格初始化检查
+    "isolatedModules": true, // 启用每个文件作为单独的模块
+    "moduleResolution": "node", // 指定模块解析策略
+    "preserveWatchOutput": true, // 保留监听输出
+    "skipLibCheck": true, // 跳过库文件的类型检查
+    "useDefineForClassFields": true, // 使用 `define` 替代 `assign` 初始化类字段
+    "allowSyntheticDefaultImports": true, // 允许合成默认导入
+    "allowJs": false, // 不允许编译JavaScript文件
+    // "noUnusedLocals": true, // 检查并报告未使用的局部变量
+    // "noUnusedParameters": true, // 检查并报告未使用的参数
+    "declaration": true,
+    "strictFunctionTypes": true // 启用函数类型的严格检查
+  }
+}

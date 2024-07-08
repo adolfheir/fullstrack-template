@@ -1,0 +1,11 @@
+{
+  "extends": "@fullstrack/config/tsconfig/tsconfig.node.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "@root/*": ["./src/*"],
+    }
+  },
+  "include": ["src"]
+}

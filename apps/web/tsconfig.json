@@ -1,0 +1,31 @@
+{
+  "extends": "@fullstrack/config/tsconfig/tsconfig.react.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "outDir": "dist",
+    "paths": {
+      "@public/*": ["./public/*"],
+      "@fullstrack/*": ["./src/app/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@materias/*": ["./src/materias/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@services/*": ["./src/services/*"],
+      "@stores/*": ["./src/stores/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
+  },
+  "include": ["src/**/*", "src/**/*.json"],
+  "exclude": ["node_modules", "lib", "es", "dist", "typings", "**/__test__", "test", "docs", "tests", "*.js"],
+  "references": [
+    {
+      "path": "../server"
+    },
+    {
+      "path": "../../../server/node_modules/superjson/dist"
+    }
+  ]
+}

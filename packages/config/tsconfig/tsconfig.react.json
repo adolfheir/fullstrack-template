@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig", // 指定JSON模式的URL
+  "display": "React Library", // 为配置文件提供一个显示名称
+  "extends": "./tsconfig.base.json", // 继承基础配置文件
+  "compilerOptions": {
+    "jsx": "react-jsx", // 指定JSX代码的编译方式为React 17及以上
+    "module": "ESNext", // 指定生成的模块代码类型为ESNext
+    "target": "es6" // 指定ECMAScript目标版本为ES6
+  }
+}
