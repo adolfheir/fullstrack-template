@@ -3,9 +3,9 @@ import { fastifyTRPCPlugin } from '@trpc/server/adapters/fastify';
 import fastify from 'fastify';
 import pino from 'pino';
 import pretty from 'pino-pretty';
-import { env } from '@root/constants/index';
-import { createContext } from './context';
-import { appRouter } from './router';
+import { env } from './constants/index';
+import { createContext } from './routers/context';
+import { appRouter } from './routers/router';
 
 export function createServer() {
   const { PORT, HOST, NODE_ENV } = env;

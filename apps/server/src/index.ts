@@ -1,8 +1,8 @@
 import 'dotenv/config';
-import 'module-alias/register';
+// import 'module-alias/register';
 // import "./aliases"
 
-import { createServer } from './server/server';
+import { createServer } from './server';
 
 const server = createServer();
 

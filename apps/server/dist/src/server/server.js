@@ -9,7 +9,7 @@ const fastify_1 = require("@trpc/server/adapters/fastify");
 const fastify_2 = __importDefault(require("fastify"));
 const pino_1 = __importDefault(require("pino"));
 const pino_pretty_1 = __importDefault(require("pino-pretty"));
-const index_1 = require("@root/constants/index");
+const index_1 = require("../constants/index");
 const context_1 = require("./context");
 const router_1 = require("./router");
 function createServer() {

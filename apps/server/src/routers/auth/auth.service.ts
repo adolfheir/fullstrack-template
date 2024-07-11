@@ -1,11 +1,11 @@
 import { prisma } from '../../utils/prisma';
 import { User } from '@prisma/client';
-import { Context } from '@root/server/context';
+import { Context } from '../context';
 import { TRPCError } from '@trpc/server';
 import { compare, hash } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 // import { authConfig } from '../../configs/auth.config';
-import { env } from '@root/constants/index';
+import { env } from '../..//constants/index';
 import { SignInDto, SignUpDto } from './auth.dtos';
 
 type UserResponse = Omit<User, 'password'>;

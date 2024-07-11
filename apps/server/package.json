@@ -5,9 +5,6 @@
   "keywords": [],
   "license": "ISC",
   "author": "cyh",
-  "exports": {
-    "./type": "./src/type.ts"
-  },
   "main": "index.js",
   "scripts": {
     "build": "tsc -b",

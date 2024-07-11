@@ -1,7 +1,7 @@
 import { inferAsyncReturnType, TRPCError } from '@trpc/server';
 import { CreateFastifyContextOptions } from '@trpc/server/adapters/fastify';
 import { verify } from 'jsonwebtoken';
-import { env } from '@root/constants/index';
+import { env } from '../constants/index';
 
 export interface User {
   email: string;

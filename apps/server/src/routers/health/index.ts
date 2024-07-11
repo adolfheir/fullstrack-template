@@ -1,4 +1,4 @@
-import { noAuthProcedure, router } from '@root/server/trpc';
+import { noAuthProcedure, router } from "../../trpc"
 
 export const healthRouter = router({
   health: noAuthProcedure.query(() => {

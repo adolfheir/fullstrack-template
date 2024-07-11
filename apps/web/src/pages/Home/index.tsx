@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, type CSSProperties } from 'react';
 import cls from 'classnames';
 import { trpcClient } from '@services/trpc';
+import { ProcedureCallOptions } from '@trpc/server/dist/core/internals/procedureBuilder';
+import Password from 'antd/es/input/Password';
 
 const componentName = 'Index';
 
@@ -13,14 +15,17 @@ export const Index: React.FC<IndexProps> = (props) => {
 
   useEffect(() => {
     (async () => {
-      // try {
-      //   let data = await trpcClient.auth.signIn({
-      //     // email:""
-      //   })
-      //   console.log('data', data);
-      // } catch (error) {
-      //   console.error('error', error);
-      // }
+      try {
+        // let data = await trpcClient.auth.signIn({
+        //   input:{
+        //     email: "as",
+        //     Password:"2"
+        //   }
+        // } );
+        // console.log('data', data);
+      } catch (error) {
+        console.error('error', error);
+      }
     })();
   }, []);
 

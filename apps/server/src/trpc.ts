@@ -1,9 +1,9 @@
-import { superjson } from '../utils/superjson';
 import { initTRPC, TRPCError } from '@trpc/server';
-import { Context } from './context';
+import { superjson } from './utils/superjson';
+import { Context } from './routers/context';
 
 const t = initTRPC.context<Context>().create({
-  transformer: superjson,
+  // transformer: superjson,
   errorFormatter({ shape, error, ctx }) {
     if (error.code === 'INTERNAL_SERVER_ERROR') {
       ctx?.req.log.error(error);

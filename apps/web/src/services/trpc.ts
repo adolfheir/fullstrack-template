@@ -1,13 +1,18 @@
-import { createTRPCProxyClient, httpBatchLink } from '@trpc/client';
 import { TRPC_HOST } from '@constants/host';
-import type { AppRouter } from '@fullstrack/server/src/type';
-import {} from "@fullstrack/server/src/type"
+import { createTRPCProxyClient, httpBatchLink } from '@trpc/client';
+// import type { AppRouter } from '@fullstrack/server/src/type';
+import type { AppRouter } from '../../../server/src/type';
 import { userStore } from '@stores/userStore';
 
-export const trpcClient = createTRPCProxyClient<AppRouter>({
+export const trpcClient: AppRouter = createTRPCProxyClient<AppRouter>({
   links: [
     httpBatchLink({
-      url: 'http://127.0.0.1:3000/trpc',
+      url: TRPC_HOST,
+      headers: () => {
+        return {
+          authorization: `Bearer ${userStore?.token}`,
+        };
+      },
     }),
   ],
 });

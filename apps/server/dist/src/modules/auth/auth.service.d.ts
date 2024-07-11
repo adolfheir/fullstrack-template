@@ -1,5 +1,5 @@
 import { User } from '@prisma/client';
-import { Context } from '@root/server/context';
+import { Context } from '../../server/context';
 import { SignInDto, SignUpDto } from './auth.dtos';
 type UserResponse = Omit<User, 'password'>;
 type SignUpResult = UserResponse & {

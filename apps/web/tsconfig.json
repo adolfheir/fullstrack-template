@@ -1,7 +1,6 @@
 {
   "extends": "@fullstrack/config/tsconfig/tsconfig.react.json",
   "compilerOptions": {
-    "skipLibCheck": true,
     "allowJs": true,
     "baseUrl": "./",
     "outDir": "dist",
@@ -23,9 +22,6 @@
   "references": [
     {
       "path": "../server"
-    },
-    {
-      "path": "../../../server/node_modules/superjson/dist"
     }
   ]
 }
