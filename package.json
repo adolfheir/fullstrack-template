@@ -8,6 +8,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "clean": "pnpm -r exec rm -rf node_modules && rm -rf ./node_modules ",
     "prettier": "prettier --config ./prettier.config.js  --write .",
     "taze": "pnpm -r exec taze major --interactive false --write false --install false"
   },

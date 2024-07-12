@@ -46,6 +46,7 @@ export default {
     '^react', // 其他 react 相关的库
     'classnames', // classnames 库
     '<THIRD_PARTY_MODULES>', // 其他第三方模块
+    '^@/(.*)$', // @public 路径下的模块
     '^@public/(.*)$', // @public 路径下的模块
     '^@/constants/(.*)$', // @/constants 路径下的模块
     '^@utils/(.*)$', // @utils 路径下的模块

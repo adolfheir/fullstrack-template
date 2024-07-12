@@ -1,8 +1,0 @@
-{
-  "extends": "@fullstrack/config/tsconfig/tsconfig.node.json",
-  "compilerOptions": {
-    "baseUrl": "src",
-    "outDir": "dist",
-  },
-  "include": ["src"]
-}

@@ -1,10 +1,11 @@
-import React, { ReactNode, useEffect, useMemo, type CSSProperties } from 'react';
+import React, { ReactNode, useEffect, useMemo, useState, type CSSProperties } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { omit } from 'lodash-es';
 import 'antd/dist/reset.css';
 import { routerList } from './generateRouter';
 import './tailwind.global.css';
+import { AuthWrapper } from './AuthWrapper';
 
 const componentName = 'app';
 
@@ -38,9 +39,9 @@ let root = document.getElementById('root');
 ReactDOM.createRoot(root!).render(
   // <React.StrictMode>
   <BrowserRouter>
-    {/* <AuthWrapper> */}
-    <App></App>
-    {/* </AuthWrapper> */}
+    <AuthWrapper>
+      <App></App>
+    </AuthWrapper>
   </BrowserRouter>,
   // </React.StrictMode>,
 );

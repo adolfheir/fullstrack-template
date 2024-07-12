@@ -1,10 +1,11 @@
 {
-  "extends": "@fullstrack/config/tsconfig/tsconfig.react.json",
+  "extends": "@fullstrack/tsconfig/tsconfig.react.json",
   "compilerOptions": {
     "allowJs": true,
-    "baseUrl": "./",
+    // "baseUrl": "./",
     "outDir": "dist",
     "paths": {
+      "@/*": [".//*"],
       "@public/*": ["./public/*"],
       "@fullstrack/*": ["./src/app/*"],
       "@components/*": ["./src/components/*"],
@@ -18,10 +19,9 @@
     }
   },
   "include": ["src/**/*", "src/**/*.json"],
-  "exclude": ["node_modules", "lib", "es", "dist", "typings", "**/__test__", "test", "docs", "tests", "*.js"],
   "references": [
     {
-      "path": "../server"
+      "path": "../api/tsconfig.json"
     }
   ]
 }

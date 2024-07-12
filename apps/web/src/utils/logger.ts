@@ -1,8 +1,8 @@
 // 暂时用consola 后续切
-import { createConsola, LogLevels, LogTypes, type Consola, type ConsolaInstance } from 'consola';
-import { isNumber } from 'lodash-es';
 import { IS_DEV_MODE, isDev } from '@constants/index';
 import { LOG_LEVEL } from '@constants/storageKey';
+import { createConsola, LogLevels, LogTypes, type Consola, type ConsolaInstance } from 'consola';
+import { isNumber } from 'lodash-es';
 
 //暂时只使用这5个类别
 export type CreateLogger = (namespace?: string) => Pick<ConsolaInstance, 'error' | 'warn' | 'info' | 'debug' | 'trace'>;

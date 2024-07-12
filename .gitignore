@@ -136,3 +136,7 @@ lerna-debug.log
 # docker开发下的pnpm cache 目录
 .pnpm-cache
 
+
+#project api
+apps/api/dist
+

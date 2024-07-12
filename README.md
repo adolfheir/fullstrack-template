@@ -8,19 +8,22 @@ cd ./docker-file bash ./restart.sh
 
 ```
 // 生产迁移文件 xxx 代表这次操作名称
-pnpm -r --filter @fullstrack/server run prisma migrate dev --name xxx
-
-// 强制同步
-pnpm -r --filter @fullstrack/server run prisma db push
+pnpm -r --filter @fullstrack/api run prisma migrate dev --name xxx
 
 // 重置数据库
-pnpm -r --filter @fullstrack/server run prisma migrate reset
+pnpm -r --filter @fullstrack/api run prisma migrate reset
+
+// 强制同步
+pnpm -r --filter @fullstrack/api run prisma db push
+
+// 播种数据
+pnpm -r --filter @fullstrack/api  run seed     
 
 ```
 
 ## 生成ts定义文件
 
 ```
-pnpm -r --filter @fullstrack/server run prisma generate
+pnpm -r --filter @fullstrack/api run prisma generate
 
 ```

@@ -1,6 +1,6 @@
+import { APP_LANG, isDev } from '@constants/index';
 import { message } from 'antd';
 import { has } from 'lodash-es';
-import { APP_LANG, isDev } from '@constants/index';
 import logger from '@utils/logger';
 
 const useLocale = (data: any) => {

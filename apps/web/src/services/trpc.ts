@@ -1,18 +1,24 @@
 import { TRPC_HOST } from '@constants/host';
-import { createTRPCProxyClient, httpBatchLink } from '@trpc/client';
-// import type { AppRouter } from '@fullstrack/server/src/type';
-import type { AppRouter } from '../../../server/src/type';
+import { createTRPCClient, httpBatchLink, type CreateTRPCClient } from '@trpc/client';
+import type { inferRouterInputs, inferRouterOutputs } from '@trpc/server';
 import { userStore } from '@stores/userStore';
+import type { AppRouter } from '@fullstrack/api/src/routers';
+// import type { AppRouter } from '../../../api/src/routers';
 
-export const trpcClient: AppRouter = createTRPCProxyClient<AppRouter>({
+export type RouterInput = inferRouterInputs<AppRouter>;
+export type RouterOutput = inferRouterOutputs<AppRouter>;
+
+export const trpcClient: CreateTRPCClient<AppRouter> = createTRPCClient<AppRouter>({
   links: [
     httpBatchLink({
       url: TRPC_HOST,
       headers: () => {
         return {
-          authorization: `Bearer ${userStore?.token}`,
+          authorization: userStore?.token ? `Bearer ${userStore?.token}` : '',
         };
       },
     }),
   ],
+
+
 });
