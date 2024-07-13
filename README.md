@@ -27,3 +27,19 @@ pnpm -r --filter @fullstrack/api  run seed
 pnpm -r --filter @fullstrack/api run prisma generate
 
 ```
+
+## 生产tprc类型定义文件
+
+```
+pnpm -r --filter @fullstrack/api run build
+
+```
+
+## run
+
+```
+pnpm -r --filter @fullstrack/api run dev
+
+pnpm -r --filter @fullstrack/web run dev
+
+```

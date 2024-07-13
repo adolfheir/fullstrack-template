@@ -53,12 +53,10 @@ export function decrypt(data: any) {
   return decryptedStr.toString();
 }
 
-
 export function encodeBase64(plainText: string): string {
   const encodedData = CryptoJS.enc.Utf8.parse(plainText).toString(CryptoJS.enc.Base64);
   return encodedData;
 }
-
 
 export function parseBase64(base64String: string) {
   // 解码
