@@ -8,6 +8,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "build": "turbo run build --env-mode=loose",
+    "dev": "DO_NOT_TRACK=1 && turbo run dev --filter admin --env-mode=loose",
     "clean": "pnpm -r exec rm -rf node_modules && rm -rf ./node_modules ",
     "prettier": "prettier --config ./prettier.config.js  --write .",
     "taze": "pnpm -r exec taze major --interactive false --write false --install false"

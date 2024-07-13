@@ -139,4 +139,8 @@ lerna-debug.log
 
 #project api
 apps/api/dist
+apps/web/dist
+
+apps/db/lib
+apps/db/dist
 

@@ -20,7 +20,8 @@
     "allowJs": false, // 不允许编译JavaScript文件
     // "noUnusedLocals": true, // 检查并报告未使用的局部变量
     // "noUnusedParameters": true, // 检查并报告未使用的参数
-    "declaration": true,
-    "strictFunctionTypes": true // 启用函数类型的严格检查
+    // "declaration": true,
+    "strictFunctionTypes": true, // 启用函数类型的严格检查
+
   }
 }

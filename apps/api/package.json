@@ -4,20 +4,18 @@
   "description": "",
   "keywords": [],
   "license": "ISC",
-  "author": "cyh",
+  "author": "",
   "main": "index.js",
   "scripts": {
     "build": "tsc -b",
     "dev": "nodemon src/index.ts --config ./nodemon.json",
-    "prisma": "prisma",
-    "seed": "ts-node prisma/seed.ts",
     "start": "npm run build && cross-env NODE_ENV=production node dist/src/index.js"
   },
   "dependencies": {
     "@fastify/cors": "^9.0.1",
     "@fastify/websocket": "^10.0.1",
+    "@fullstrack/db": "workspace:^",
     "@fullstrack/tsconfig": "workspace:^",
-    "@prisma/client": "^5.16.1",
     "@trpc/client": "11.0.0-rc.456",
     "@trpc/server": "11.0.0-rc.456",
     "@types/lodash-es": "^4.17.12",
@@ -42,7 +40,6 @@
     "fs-extra": "^11.2.0",
     "module-alias": "^2.2.3",
     "nodemon": "^3.1.4",
-    "prisma": "^5.16.1",
     "ts-node": "^10.9.2"
   },
   "_moduleAliases": {

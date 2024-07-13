@@ -1,3 +1,3 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@fullstrack/db';
 
 export const prismaIns = new PrismaClient();

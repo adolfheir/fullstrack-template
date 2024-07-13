@@ -41,12 +41,12 @@ importers:
       '@fastify/websocket':
         specifier: ^10.0.1
         version: 10.0.1
+      '@fullstrack/db':
+        specifier: workspace:^
+        version: link:../db
       '@fullstrack/tsconfig':
         specifier: workspace:^
         version: link:../../packages/tsconfig
-      '@prisma/client':
-        specifier: ^5.16.1
-        version: 5.16.2(prisma@5.16.2)
       '@trpc/client':
         specifier: 11.0.0-rc.456
         version: 11.0.0-rc.456(@trpc/server@11.0.0-rc.456)
@@ -114,8 +114,30 @@ importers:
       nodemon:
         specifier: ^3.1.4
         version: 3.1.4
-      prisma:
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.14.10)(typescript@5.5.3)
+
+  apps/db:
+    dependencies:
+      '@prisma/client':
         specifier: ^5.16.1
+        version: 5.16.2(prisma@5.16.2)
+    devDependencies:
+      '@fullstrack/tsconfig':
+        specifier: workspace:^
+        version: link:../../packages/tsconfig
+      '@types/node':
+        specifier: ^20.14.10
+        version: 20.14.10
+      bcryptjs:
+        specifier: ^2.4.3
+        version: 2.4.3
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      prisma:
+        specifier: ^5.16.2
         version: 5.16.2
       ts-node:
         specifier: ^10.9.2
@@ -2289,7 +2311,6 @@ packages:
 
   /bcryptjs@2.4.3:
     resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
-    dev: false
 
   /better-path-resolve@1.0.0:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}

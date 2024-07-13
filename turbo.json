@@ -1,0 +1,25 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": []
+    },
+    "bootstrap": {},
+    "build": {
+      "dependsOn": [
+        "bootstrap",
+        "^build"
+      ],
+      "outputs": [
+        "build/**"
+      ]
+    },
+    "pkg": {
+      "dependsOn": [
+        "build"
+      ]
+    }
+  }
+}
