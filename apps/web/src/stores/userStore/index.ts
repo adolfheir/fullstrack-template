@@ -1,9 +1,9 @@
 /* 维护当前登陆信息 */
 import React from 'react';
-import { GLOBAL_TOKEN } from '@constants/storageKey';
 import { message } from 'antd';
 import { proxy, useSnapshot } from 'valtio';
-import { trpcClient, type RouterOutput } from '@services/trpc';
+import { GLOBAL_TOKEN } from '@/constants/storageKey';
+import { trpcClient, type RouterOutput } from '@/services/trpc';
 
 export type User = RouterOutput['auth']['getUserInfoByToken'];
 

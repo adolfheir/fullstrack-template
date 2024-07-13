@@ -1,0 +1,1 @@
+import{j as c}from"./index.BYDhCDD6.js";import{r as s,c as r}from"./index.CmM5rzKw.js";const o=e=>{const{style:a,className:t}=e;return s.useEffect(()=>{},[]),s.useMemo(()=>c.jsx("div",{className:r(t),style:a,children:"login success"}),[])};o.displayName="Index";export{o as Index,o as default};

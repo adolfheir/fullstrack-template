@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
-import cls from 'classnames';
-import { APP_NAME } from '@constants/index';
-import { GLOBAL_PWD, GLOBAL_USER } from '@constants/storageKey';
 import { useMemoizedFn } from 'ahooks';
 import { Button, Checkbox, ConfigProvider, Input, InputRef, message } from 'antd';
-import { decrypt, encrypt_canRun } from '@utils/encrypt';
-import logger from '@utils/logger';
-import { userStore } from '@stores/userStore/index';
+import cls from 'classnames';
+import { APP_NAME } from '@/constants/index';
+import { GLOBAL_PWD, GLOBAL_USER } from '@/constants/storageKey';
+import { userStore } from '@/stores/userStore/index';
+import { decrypt, encrypt_canRun } from '@/utils/encrypt';
+import logger from '@/utils/logger';
 
 const img = new URL('./resources/bg.jpg', import.meta.url).href;
 

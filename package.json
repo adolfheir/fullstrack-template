@@ -9,14 +9,15 @@
   "main": "index.js",
   "scripts": {
     "build": "turbo run build --env-mode=loose",
-    "dev": "DO_NOT_TRACK=1 && turbo run dev --filter admin --env-mode=loose",
-    "clean": "pnpm -r exec rm -rf node_modules && rm -rf ./node_modules ",
+    "clean": "pnpm -r exec rm -rf node_modules ./node_modules .turbo",
+    "dev": "DO_NOT_TRACK=1 && turbo run dev --filter web --env-mode=loose",
     "prettier": "prettier --config ./prettier.config.js  --write .",
     "taze": "pnpm -r exec taze major --interactive false --write false --install false"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
     "@ianvs/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.3.3",
     "prettier-plugin-css-order": "^2.1.2",
     "prettier-plugin-packagejson": "^2.5.0",
     "prettier-plugin-tailwindcss": "^0.6.5",

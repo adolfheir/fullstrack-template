@@ -1,6 +1,6 @@
 import React, { useMemo, type CSSProperties } from 'react';
 import cls from 'classnames';
-import useLocale from '@hooks/useLocale';
+import useLocale from '@/hooks/useLocale';
 import styles from './index.module.scss';
 import locale from './locales';
 

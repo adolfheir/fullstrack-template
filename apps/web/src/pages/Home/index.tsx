@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, type CSSProperties } from 'react';
-import cls from 'classnames';
 import Password from 'antd/es/input/Password';
-import { trpcClient } from '@services/trpc';
+import cls from 'classnames';
+import { trpcClient } from '@/services/trpc';
 
 const componentName = 'Index';
 

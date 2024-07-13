@@ -8,11 +8,15 @@
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "scripts": {
-    "bootstrap":"prisma generate",
     "build": "tsc -b",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev --name",
+    "db:seed": "ts-node ./prisma/seed.ts",
     "dev": "prisma studio --port 5556 --browser=none",
-    "prisma": "prisma",
-    "seed": "ts-node ./prisma/seed.ts"
+    "prisma": "prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.16.1"
   },
   "devDependencies": {
     "@fullstrack/tsconfig": "workspace:^",
@@ -20,8 +24,5 @@
     "dotenv": "^16.4.5",
     "prisma": "^5.16.2",
     "ts-node": "^10.9.2"
-  },
-  "dependencies": {
-    "@prisma/client": "^5.16.1"
   }
 }

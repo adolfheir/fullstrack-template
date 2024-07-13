@@ -20,8 +20,8 @@
 **/umd/*
 **/types/*
 
-# project server
-apps/server/src/utils/superjson.ts
+# package/db
+packages/db/src/generated/*
 
 
 

@@ -1,8 +1,8 @@
 import React, { HTMLAttributeAnchorTarget } from 'react';
 import { get, isArray } from 'lodash-es';
-import { createLoadable } from '@components/CreateLoadable/index';
+import { createLoadable } from '@/components/CreateLoadable/index';
 
-const HOME = createLoadable(() => import(/* webpackChunkName: "home" */ '@pages/Home'));
+const HOME = createLoadable(() => import(/* webpackChunkName: "home" */ '@/pages/Home'));
 
 export interface RouterItem {
   path: string;

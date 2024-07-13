@@ -1,25 +1,18 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
+    "db:generate": {
+      "inputs": ["packages/db/prisma/schema.prisma"],
+      "outputs": ["packages/db/src/generated"]
+    },
     "dev": {
+      "dependsOn": ["^bootstrap"],
       "cache": false,
-      "persistent": true,
-      "dependsOn": []
+      "persistent": true
     },
-    "bootstrap": {},
     "build": {
-      "dependsOn": [
-        "bootstrap",
-        "^build"
-      ],
-      "outputs": [
-        "build/**"
-      ]
-    },
-    "pkg": {
-      "dependsOn": [
-        "build"
-      ]
+      "dependsOn": ["^db:generate", "^build"]
     }
+ 
   }
 }

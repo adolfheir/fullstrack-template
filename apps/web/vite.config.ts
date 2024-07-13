@@ -56,17 +56,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '@': './src',
-      '@public': '/public',
-      '@app': '/src/app',
-      '@components': '/src/components',
-      '@constants': '/src/constants',
-      '@hooks': '/src/hooks',
-      '@materias': '/src/materias',
-      '@pages': '/src/pages',
-      '@services': '/src/services',
-      '@stores': '/src/stores',
-      '@utils': '/src/utils',
+      '@': '/src',
     },
   },
   plugins: [

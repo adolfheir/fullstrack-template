@@ -44,19 +44,9 @@ export default {
     '<BUILTIN_MODULES>', // Node.js 内置模块
     '^react$', // react 库
     '^react', // 其他 react 相关的库
-    'classnames', // classnames 库
     '<THIRD_PARTY_MODULES>', // 其他第三方模块
-    '^@/(.*)$', // @public 路径下的模块
-    '^@public/(.*)$', // @public 路径下的模块
-    '^@/constants/(.*)$', // @/constants 路径下的模块
-    '^@utils/(.*)$', // @utils 路径下的模块
-    '^@services/(.*)$', // @services 路径下的模块
-    '^@fullstrack/(.*)$', // @app 路径下的模块
-    '^@stores/(.*)$', // @stores 路径下的模块
-    '^@hooks/(.*)$', // @hooks 路径下的模块
-    '^@components/(.*)$', // @components 路径下的模块
-    '^@materias/(.*)$', // @materias 路径下的模块
-    '^@pages/(.*)$', // @pages 路径下的模块
+    // '^@fullstrack/(.*)$', // workspace 路径下的模块
+    '^@/(.*)$', // @ 路径下的模块
     '^[./]', // 相对路径
     'css$', // CSS 文件
   ],

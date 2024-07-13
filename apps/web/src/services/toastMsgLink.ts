@@ -1,7 +1,7 @@
+import type { AppRouter } from '@fullstrack/api/src/routers';
 import { TRPCClientError, TRPCLink } from '@trpc/client';
 import { observable, tap } from '@trpc/server/observable';
 import { message } from 'antd';
-import type { AppRouter } from '@fullstrack/api/src/routers';
 
 export function isTRPCClientError(cause: unknown): cause is TRPCClientError<AppRouter> {
   return cause instanceof TRPCClientError;

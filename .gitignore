@@ -137,10 +137,16 @@ lerna-debug.log
 .pnpm-cache
 
 
-#project api
-apps/api/dist
+# package/web
 apps/web/dist
 
-apps/db/lib
-apps/db/dist
+# package/api
+packages/api/dist
+
+# package/db
+packages/db/dist
+packages/db/src/generated
+
+# package/tsconfig
+
 

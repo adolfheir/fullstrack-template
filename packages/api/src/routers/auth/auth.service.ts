@@ -1,4 +1,4 @@
-import { User, UserRole } from '@prisma/client';
+import { prismaIns, UserRole, type User } from '@fullstrack/db';
 import { TRPCError } from '@trpc/server';
 import { compare, hash } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
@@ -6,7 +6,6 @@ import { omit } from 'lodash';
 import { env } from '@/constants/index';
 import { type AuthContext } from '@/middlewares/authMiddleware';
 import { type Context } from '@/routers/context';
-import { prismaIns } from '@/utils/prisma';
 import { SignInDto, SignUpDto } from './auth.dtos';
 
 type UserResponse = Omit<User, 'password'>;

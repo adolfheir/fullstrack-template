@@ -13,16 +13,19 @@ importers:
         version: 2.27.7
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^4.3.0
-        version: 4.3.0(prettier@3.3.2)
+        version: 4.3.0(prettier@3.3.3)
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
       prettier-plugin-css-order:
         specifier: ^2.1.2
-        version: 2.1.2(postcss@8.4.39)(prettier@3.3.2)
+        version: 2.1.2(postcss@8.4.39)(prettier@3.3.3)
       prettier-plugin-packagejson:
         specifier: ^2.5.0
-        version: 2.5.0(prettier@3.3.2)
+        version: 2.5.0(prettier@3.3.3)
       prettier-plugin-tailwindcss:
         specifier: ^0.6.5
-        version: 0.6.5(@ianvs/prettier-plugin-sort-imports@4.3.0)(prettier-plugin-css-order@2.1.2)(prettier@3.3.2)
+        version: 0.6.5(@ianvs/prettier-plugin-sort-imports@4.3.0)(prettier-plugin-css-order@2.1.2)(prettier@3.3.3)
       taze:
         specifier: ^0.14.2
         version: 0.14.2
@@ -33,7 +36,125 @@ importers:
         specifier: ^5.5.3
         version: 5.5.3
 
-  apps/api:
+  apps/web:
+    dependencies:
+      '@trpc/client':
+        specifier: 11.0.0-rc.456
+        version: 11.0.0-rc.456(@trpc/server@11.0.0-rc.456)
+      '@trpc/server':
+        specifier: 11.0.0-rc.456
+        version: 11.0.0-rc.456
+      ahooks:
+        specifier: ^3.8.0
+        version: 3.8.0(react@18.3.1)
+      antd:
+        specifier: ^5.19.0
+        version: 5.19.1(react-dom@18.3.1)(react@18.3.1)
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
+      consola:
+        specifier: ^3.2.3
+        version: 3.2.3
+      crypto-js:
+        specifier: ^4.2.0
+        version: 4.2.0
+      dayjs:
+        specifier: ^1.11.11
+        version: 1.11.11
+      eventemitter3:
+        specifier: ^5.0.1
+        version: 5.0.1
+      framer-motion:
+        specifier: ^11.2.12
+        version: 11.3.0(react-dom@18.3.1)(react@18.3.1)
+      lodash-es:
+        specifier: ^4.17.21
+        version: 4.17.21
+      nanoid:
+        specifier: ^5.0.7
+        version: 5.0.7
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      react-router-dom:
+        specifier: ^6.24.1
+        version: 6.24.1(react-dom@18.3.1)(react@18.3.1)
+      valtio:
+        specifier: ^1.13.2
+        version: 1.13.2(@types/react@18.3.3)(react@18.3.1)
+    devDependencies:
+      '@fullstrack/api':
+        specifier: workspace:^
+        version: link:../../packages/api
+      '@fullstrack/db':
+        specifier: workspace:^
+        version: link:../../packages/db
+      '@fullstrack/tsconfig':
+        specifier: workspace:^
+        version: link:../../tooling/tsconfig
+      '@svgr/plugin-jsx':
+        specifier: ^8.1.0
+        version: 8.1.0(@svgr/core@8.1.0)
+      '@svgr/plugin-svgo':
+        specifier: ^8.1.0
+        version: 8.1.0(@svgr/core@8.1.0)(typescript@5.5.3)
+      '@types/crypto-js':
+        specifier: ^4.2.2
+        version: 4.2.2
+      '@types/lodash':
+        specifier: ^4.17.6
+        version: 4.17.6
+      '@types/lodash-es':
+        specifier: ^4.17.12
+        version: 4.17.12
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.7.0
+        version: 3.7.0(vite@5.3.3)
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.39)
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
+      postcss:
+        specifier: ^8.4.39
+        version: 8.4.39
+      rollup-plugin-visualizer:
+        specifier: ^5.12.0
+        version: 5.12.0
+      sass:
+        specifier: ^1.77.6
+        version: 1.77.7
+      tailwindcss:
+        specifier: ^3.4.4
+        version: 3.4.4
+      unplugin-inject-preload:
+        specifier: ^2.0.4
+        version: 2.0.4
+      vite:
+        specifier: ^5.3.3
+        version: 5.3.3(sass@1.77.7)
+      vite-plugin-checker:
+        specifier: ^0.7.0
+        version: 0.7.1(typescript@5.5.3)(vite@5.3.3)
+      vite-plugin-html:
+        specifier: ^3.2.2
+        version: 3.2.2(vite@5.3.3)
+      vite-plugin-svgr:
+        specifier: ^4.2.0
+        version: 4.2.0(typescript@5.5.3)(vite@5.3.3)
+
+  packages/api:
     dependencies:
       '@fastify/cors':
         specifier: ^9.0.1
@@ -46,7 +167,7 @@ importers:
         version: link:../db
       '@fullstrack/tsconfig':
         specifier: workspace:^
-        version: link:../../packages/tsconfig
+        version: link:../../tooling/tsconfig
       '@trpc/client':
         specifier: 11.0.0-rc.456
         version: 11.0.0-rc.456(@trpc/server@11.0.0-rc.456)
@@ -118,7 +239,7 @@ importers:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@20.14.10)(typescript@5.5.3)
 
-  apps/db:
+  packages/db:
     dependencies:
       '@prisma/client':
         specifier: ^5.16.1
@@ -126,13 +247,10 @@ importers:
     devDependencies:
       '@fullstrack/tsconfig':
         specifier: workspace:^
-        version: link:../../packages/tsconfig
+        version: link:../../tooling/tsconfig
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.10
-      bcryptjs:
-        specifier: ^2.4.3
-        version: 2.4.3
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
@@ -143,119 +261,9 @@ importers:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@20.14.10)(typescript@5.5.3)
 
-  apps/web:
-    dependencies:
-      '@trpc/client':
-        specifier: 11.0.0-rc.456
-        version: 11.0.0-rc.456(@trpc/server@11.0.0-rc.456)
-      '@trpc/server':
-        specifier: 11.0.0-rc.456
-        version: 11.0.0-rc.456
-      ahooks:
-        specifier: ^3.8.0
-        version: 3.8.0(react@18.3.1)
-      antd:
-        specifier: ^5.19.0
-        version: 5.19.1(react-dom@18.3.1)(react@18.3.1)
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
-      consola:
-        specifier: ^3.2.3
-        version: 3.2.3
-      crypto-js:
-        specifier: ^4.2.0
-        version: 4.2.0
-      dayjs:
-        specifier: ^1.11.11
-        version: 1.11.11
-      eventemitter3:
-        specifier: ^5.0.1
-        version: 5.0.1
-      framer-motion:
-        specifier: ^11.2.12
-        version: 11.3.0(react-dom@18.3.1)(react@18.3.1)
-      lodash-es:
-        specifier: ^4.17.21
-        version: 4.17.21
-      nanoid:
-        specifier: ^5.0.7
-        version: 5.0.7
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-      react-router-dom:
-        specifier: ^6.24.1
-        version: 6.24.1(react-dom@18.3.1)(react@18.3.1)
-      valtio:
-        specifier: ^1.13.2
-        version: 1.13.2(@types/react@18.3.3)(react@18.3.1)
-    devDependencies:
-      '@fullstrack/api':
-        specifier: workspace:^
-        version: link:../api
-      '@fullstrack/tsconfig':
-        specifier: workspace:^
-        version: link:../../packages/tsconfig
-      '@svgr/plugin-jsx':
-        specifier: ^8.1.0
-        version: 8.1.0(@svgr/core@8.1.0)
-      '@svgr/plugin-svgo':
-        specifier: ^8.1.0
-        version: 8.1.0(@svgr/core@8.1.0)(typescript@5.5.3)
-      '@types/crypto-js':
-        specifier: ^4.2.2
-        version: 4.2.2
-      '@types/lodash':
-        specifier: ^4.17.6
-        version: 4.17.6
-      '@types/lodash-es':
-        specifier: ^4.17.12
-        version: 4.17.12
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.3
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.0
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.7.0
-        version: 3.7.0(vite@5.3.3)
-      autoprefixer:
-        specifier: ^10.4.19
-        version: 10.4.19(postcss@8.4.39)
-      postcss:
-        specifier: ^8.4.39
-        version: 8.4.39
-      rollup-plugin-visualizer:
-        specifier: ^5.12.0
-        version: 5.12.0
-      sass:
-        specifier: ^1.77.6
-        version: 1.77.7
-      tailwindcss:
-        specifier: ^3.4.4
-        version: 3.4.4
-      unplugin-inject-preload:
-        specifier: ^2.0.4
-        version: 2.0.4
-      vite:
-        specifier: ^5.3.3
-        version: 5.3.3(sass@1.77.7)
-      vite-plugin-checker:
-        specifier: ^0.7.0
-        version: 0.7.1(typescript@5.5.3)(vite@5.3.3)
-      vite-plugin-html:
-        specifier: ^3.2.2
-        version: 3.2.2(vite@5.3.3)
-      vite-plugin-svgr:
-        specifier: ^4.2.0
-        version: 4.2.0(typescript@5.5.3)(vite@5.3.3)
+  tooling/devops: {}
 
-  packages/tsconfig: {}
+  tooling/tsconfig: {}
 
 packages:
 
@@ -1211,7 +1219,7 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@ianvs/prettier-plugin-sort-imports@4.3.0(prettier@3.3.2):
+  /@ianvs/prettier-plugin-sort-imports@4.3.0(prettier@3.3.3):
     resolution: {integrity: sha512-OOMtUcO4J3LoL63dOKAe7bn+lSRRPeit2DqNHpx+wvBp3Grejo2PMaK4Mp1mwy8pnat64ccSgk/lBZbsAdLErw==}
     peerDependencies:
       '@vue/compiler-sfc': 2.7.x || 3.x
@@ -1225,7 +1233,7 @@ packages:
       '@babel/parser': 7.24.7
       '@babel/traverse': 7.24.7
       '@babel/types': 7.24.7
-      prettier: 3.3.2
+      prettier: 3.3.3
       semver: 7.6.2
     transitivePeerDependencies:
       - supports-color
@@ -2311,6 +2319,7 @@ packages:
 
   /bcryptjs@2.4.3:
     resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
+    dev: false
 
   /better-path-resolve@1.0.0:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
@@ -4257,7 +4266,7 @@ packages:
       which-pm: 2.2.0
     dev: true
 
-  /prettier-plugin-css-order@2.1.2(postcss@8.4.39)(prettier@3.3.2):
+  /prettier-plugin-css-order@2.1.2(postcss@8.4.39)(prettier@3.3.3):
     resolution: {integrity: sha512-vomxPjHI6pOMYcBuouSJHxxQClJXaUpU9rsV9IAO2wrSTZILRRlrxAAR8t9UF6wtczLkLfNRFUwM+ZbGXOONUA==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -4266,12 +4275,12 @@ packages:
       css-declaration-sorter: 7.2.0(postcss@8.4.39)
       postcss-less: 6.0.0(postcss@8.4.39)
       postcss-scss: 4.0.9(postcss@8.4.39)
-      prettier: 3.3.2
+      prettier: 3.3.3
     transitivePeerDependencies:
       - postcss
     dev: true
 
-  /prettier-plugin-packagejson@2.5.0(prettier@3.3.2):
+  /prettier-plugin-packagejson@2.5.0(prettier@3.3.3):
     resolution: {integrity: sha512-6XkH3rpin5QEQodBSVNg+rBo4r91g/1mCaRwS1YGdQJZ6jwqrg2UchBsIG9tpS1yK1kNBvOt84OILsX8uHzBGg==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -4279,12 +4288,12 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 3.3.2
+      prettier: 3.3.3
       sort-package-json: 2.10.0
       synckit: 0.9.0
     dev: true
 
-  /prettier-plugin-tailwindcss@0.6.5(@ianvs/prettier-plugin-sort-imports@4.3.0)(prettier-plugin-css-order@2.1.2)(prettier@3.3.2):
+  /prettier-plugin-tailwindcss@0.6.5(@ianvs/prettier-plugin-sort-imports@4.3.0)(prettier-plugin-css-order@2.1.2)(prettier@3.3.3):
     resolution: {integrity: sha512-axfeOArc/RiGHjOIy9HytehlC0ZLeMaqY09mm8YCkMzznKiDkwFzOpBvtuhuv3xG5qB73+Mj7OCe2j/L1ryfuQ==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -4336,9 +4345,9 @@ packages:
       prettier-plugin-svelte:
         optional: true
     dependencies:
-      '@ianvs/prettier-plugin-sort-imports': 4.3.0(prettier@3.3.2)
-      prettier: 3.3.2
-      prettier-plugin-css-order: 2.1.2(postcss@8.4.39)(prettier@3.3.2)
+      '@ianvs/prettier-plugin-sort-imports': 4.3.0(prettier@3.3.3)
+      prettier: 3.3.3
+      prettier-plugin-css-order: 2.1.2(postcss@8.4.39)(prettier@3.3.3)
     dev: true
 
   /prettier@2.8.8:
@@ -4347,8 +4356,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prettier@3.3.2:
-    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
+  /prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true

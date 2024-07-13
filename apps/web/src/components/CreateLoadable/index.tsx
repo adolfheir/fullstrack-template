@@ -1,5 +1,5 @@
 import React, { ComponentType, LazyExoticComponent, ReactElement } from 'react';
-import ErrorBoundary from '@components/ErrorBoundary';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 let LoadingComponent: ReactElement | null = null;
 

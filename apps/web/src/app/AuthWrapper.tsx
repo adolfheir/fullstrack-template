@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useAsyncEffect } from 'ahooks';
-import { userStore, useUserStore } from '@stores/userStore/index';
-import { createLoadable } from '@components/CreateLoadable';
-import type { LoginProps } from '@materias/GlobalLayout/Login';
+import { createLoadable } from '@/components/CreateLoadable';
+import type { LoginProps } from '@/materias/GlobalLayout/Login';
+import { userStore, useUserStore } from '@/stores/userStore/index';
 
-const Login = createLoadable<LoginProps>(() => import(/* webpackChunkName: "Login" */ '@materias/GlobalLayout/Login'));
+const Login = createLoadable<LoginProps>(() => import(/* webpackChunkName: "Login" */ '@/materias/GlobalLayout/Login'));
 
 export interface AuthWrapperProps {
   children: React.ReactNode;

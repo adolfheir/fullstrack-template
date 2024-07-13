@@ -1,10 +1,10 @@
 # 开发环境
 
-## 运行pg
+## 本地运行postgres 
 
-cd ./docker-file bash ./restart.sh
+pnpm -r --filter @fullstrack/devops run start 
 
-## 同步schema => db
+## prisma
 
 ```
 // 生产迁移文件 xxx 代表这次操作名称
@@ -17,13 +17,9 @@ pnpm -r --filter @fullstrack/db run prisma migrate reset
 pnpm -r --filter @fullstrack/db run prisma db push
 
 // 播种数据
-pnpm -r --filter @fullstrack/db  run seed     
+pnpm -r --filter @fullstrack/db  run seed    
 
-```
-
-## 生成ts定义文件
-
-```
+// 生成ts定义文件
 pnpm -r --filter @fullstrack/db run prisma generate
 
 ```

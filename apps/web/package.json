@@ -9,7 +9,8 @@
   "main": "index.js",
   "scripts": {
     "build": "vite build",
-    "dev": "vite"
+    "dev": "vite",
+    "analyse": "cross-env ANALYSE=true vite build"
   },
   "dependencies": {
     "@trpc/client": "11.0.0-rc.456",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@fullstrack/api": "workspace:^",
+    "@fullstrack/db": "workspace:^",
     "@fullstrack/tsconfig": "workspace:^",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-svgo": "^8.1.0",
@@ -41,6 +43,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "autoprefixer": "^10.4.19",
+    "cross-env": "^7.0.3",
     "postcss": "^8.4.39",
     "rollup-plugin-visualizer": "^5.12.0",
     "sass": "^1.77.6",
