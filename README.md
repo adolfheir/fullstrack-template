@@ -1,3 +1,7 @@
+# 简介
+
+全栈模板开发模板，聚焦 full-stack typesafety  
+
 # 开发环境
 
 ## 本地运行postgres 
