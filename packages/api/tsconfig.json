@@ -4,13 +4,15 @@
     "baseUrl": "src",
     "outDir": "dist",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      // "@fullstrack/db": ["../db"]
+      // "@fullstrack/db": ["/Volumes/Data/work/personal/code/js/fullstrack-template1/packages/db"]
     }
   },
   "include": ["src"],
   "references": [
     {
-      "path": "../db/tsconfig.json"
+      // "path": "../db/tsconfig.json"
     }
   ]
 }

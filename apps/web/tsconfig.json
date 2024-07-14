@@ -5,7 +5,9 @@
     // "baseUrl": "./",
     "outDir": "dist",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      // "@fullstrack/db": ["../../packages/db"]
+      // "@fullstrack/db": ["/Volumes/Data/work/personal/code/js/fullstrack-template1/packages/db"]
     }
   },
   "include": ["src/**/*", "src/**/*.json"],
@@ -14,7 +16,7 @@
       "path": "../../packages/api/tsconfig.json"
     },
     {
-      "path": "../../packages/db/tsconfig.json"
+      // "path": "../...packages/db/tsconfig.json"
     }
   ]
 }

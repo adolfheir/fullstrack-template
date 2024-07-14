@@ -9,7 +9,8 @@
   "main": "index.js",
   "scripts": {
     "build": "turbo run build --env-mode=loose",
-    "clean": "pnpm -r exec rm -rf node_modules ./node_modules .turbo",
+    "clean": "rm -rf ./node_modules && pnpm -r exec rm -rf node_modules  .turbo",
+    "clean:cache": "pnpm -r exec rm -rf .turbo",
     "dev": "DO_NOT_TRACK=1 && turbo run dev --filter web --env-mode=loose",
     "prettier": "prettier --config ./prettier.config.js  --write .",
     "taze": "pnpm -r exec taze major --interactive false --write false --install false"
