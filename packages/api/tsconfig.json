@@ -1,16 +1,12 @@
 {
   "extends": "@fullstrack/tsconfig/tsconfig.node.json",
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "outDir": "dist",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"],
-  "references": [
-    {
-      "path": "../db/tsconfig.json"
-    }
-  ]
+  "references": []
 }

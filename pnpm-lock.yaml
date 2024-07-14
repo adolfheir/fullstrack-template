@@ -244,6 +244,9 @@ importers:
       '@prisma/client':
         specifier: ^5.16.1
         version: 5.16.2(prisma@5.16.2)
+      bcryptjs:
+        specifier: ^2.4.3
+        version: 2.4.3
     devDependencies:
       '@fullstrack/tsconfig':
         specifier: workspace:^

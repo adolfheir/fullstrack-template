@@ -1,16 +1,15 @@
-import type { AppRouter } from '@fullstrack/api/src/routers';
+// import type { AppRouter } from '@fullstrack/api/src/routers';
 import { createTRPCClient, httpBatchLink, httpLink, loggerLink, splitLink, type CreateTRPCClient } from '@trpc/client';
 import type { inferRouterInputs, inferRouterOutputs } from '@trpc/server';
 import { TRPC_HOST } from '@/constants/host';
 import { userStore } from '@/stores/userStore';
-// import type { AppRouter } from '../../../../packages/api/src/routers';
+import type { AppRouter } from '../../../../packages/api/src/routers';
 import { toastMsgLink } from './toastMsgLink';
 
 export type RouterInput = inferRouterInputs<AppRouter>;
 export type RouterOutput = inferRouterOutputs<AppRouter>;
 
 
-// "path": "../../../packages/api/tsconfig.json"
 
 const httpLinkOptions = {
   url: TRPC_HOST,

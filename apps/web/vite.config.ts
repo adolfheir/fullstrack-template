@@ -28,7 +28,7 @@ const getUuid = (() => {
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: './build',
+    outDir: './dist',
     manifest: IS_BUILD,
     sourcemap: IS_ANALYSE,
     rollupOptions: {

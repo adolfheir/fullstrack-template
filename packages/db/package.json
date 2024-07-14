@@ -16,7 +16,8 @@
     "prisma": "prisma"
   },
   "dependencies": {
-    "@prisma/client": "^5.16.1"
+    "@prisma/client": "^5.16.1",
+    "bcryptjs": "^2.4.3"
   },
   "devDependencies": {
     "@fullstrack/tsconfig": "workspace:^",
