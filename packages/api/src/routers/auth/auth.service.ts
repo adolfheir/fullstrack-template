@@ -8,6 +8,8 @@ import { type AuthContext } from '@/middlewares/authMiddleware';
 import { type Context } from '@/routers/context';
 import { SignInDto, SignUpDto } from './auth.dtos';
 
+export { type User, UserRole } from '@fullstrack/db';
+
 type UserResponse = Omit<User, 'password'>;
 type SignUpResult = UserResponse & { accessToken: string };
 

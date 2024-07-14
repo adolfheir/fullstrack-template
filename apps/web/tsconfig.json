@@ -5,16 +5,15 @@
     // "baseUrl": "./",
     "outDir": "dist",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      // fix type see : https://github.com/microsoft/TypeScript/pull/58176
+      "@fullstrack/db": ["/node_modules/@fullstrack/db"]
     }
   },
   "include": ["src/**/*", "src/**/*.json"],
   "references": [
     {
       "path": "../../packages/api/tsconfig.json"
-    },
-    {
-      "path": "../../packages/db/tsconfig.json"
     }
   ]
 }

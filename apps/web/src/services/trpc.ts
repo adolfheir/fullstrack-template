@@ -10,7 +10,6 @@ export type RouterInput = inferRouterInputs<AppRouter>;
 export type RouterOutput = inferRouterOutputs<AppRouter>;
 
 
-// "path": "../../../packages/api/tsconfig.json"
 
 const httpLinkOptions = {
   url: TRPC_HOST,

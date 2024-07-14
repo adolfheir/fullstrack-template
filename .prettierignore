@@ -21,7 +21,7 @@
 **/types/*
 
 # package/db
-packages/db/src/generated/*
+packages/db/generated/*
 
 
 

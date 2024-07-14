@@ -13,6 +13,7 @@
     "analyse": "cross-env ANALYSE=true vite build"
   },
   "dependencies": {
+    "@fullstrack/db": "workspace:^",
     "@trpc/client": "11.0.0-rc.456",
     "@trpc/server": "11.0.0-rc.456",
     "ahooks": "^3.8.0",
@@ -32,7 +33,6 @@
   },
   "devDependencies": {
     "@fullstrack/api": "workspace:^",
-    "@fullstrack/db": "workspace:^",
     "@fullstrack/tsconfig": "workspace:^",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-svgo": "^8.1.0",

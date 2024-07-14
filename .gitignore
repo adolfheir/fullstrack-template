@@ -145,7 +145,7 @@ packages/api/dist
 
 # package/db
 packages/db/dist
-packages/db/src/generated
+packages/db/generated
 
 # package/tsconfig
 
