@@ -1,0 +1,20 @@
+{
+  "extends": "@fullstrack/tsconfig/tsconfig.react.json",
+  "compilerOptions": {
+    "allowJs": true,
+    // "baseUrl": "./",
+    "outDir": "dist",
+    "paths": {
+      "@/*": ["./src/*"],
+      // fix ts(2742)
+      // see : https://github.com/microsoft/TypeScript/pull/58176
+      "@fullstrack/db": ["/node_modules/@fullstrack/db"]
+    }
+  },
+  "include": ["src/**/*", "src/**/*.json"],
+  "references": [
+    {
+      "path": "../../packages/api/tsconfig.json"
+    }
+  ]
+}

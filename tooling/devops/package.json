@@ -1,0 +1,12 @@
+{
+  "name": "@fullstrack/devops",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "start": "docker-compose up --remove-orphans --force-recreate",
+    "start:nohup": "bash ./restart.sh"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@fullstrack/tsconfig",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "cyh",
+  "files": [
+    "tsconfig.base.json",
+    "tsconfig.react.json",
+    "tsconfig.node.json"
+  ]
+}
