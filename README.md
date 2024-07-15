@@ -43,3 +43,7 @@ pnpm -r --filter @fullstrack/api run dev
 pnpm -r --filter @fullstrack/web run dev
 
 ```
+
+## docker
+
+docker run -w $(pwd) -it -v "$(pwd):$(pwd)" -v "$(pwd)/.pnpm-cache:/pnpm" -p 3000:3000 -p 3001:3001 -p 5556:5556 --privileged=true ihouqi-docker.pkg.coding.net/fe/library/pnpm:8.15.8 bash

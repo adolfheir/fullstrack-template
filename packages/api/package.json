@@ -5,11 +5,13 @@
   "keywords": [],
   "license": "ISC",
   "author": "",
-  "main": "index.js",
+  "main": "./dist/src/index.js",
+  "types": "./src/index.ts",
   "scripts": {
     "build": "tsc -b",
-    "dev": "nodemon src/index.ts --config ./nodemon.json",
-    "start": "npm run build && cross-env NODE_ENV=production node dist/src/index.js"
+    "dev": "pnpm with-env nodemon src/index.ts --config ./nodemon.json",
+    "start": "pnpm build && cross-env NODE_ENV=production pnpm with-env node --require ./tsconfig-paths-bootstrap ./dist/src/index.js",
+    "with-env": "dotenvx run --env-file=../../.env --"
   },
   "dependencies": {
     "@fastify/cors": "^9.0.1",
@@ -29,20 +31,16 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@dotenvx/dotenvx": "^1.6.2",
     "@types/bcryptjs": "^2.4.6",
     "@types/fs-extra": "^11.0.4",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/lodash": "^4.17.6",
-    "@types/module-alias": "^2.0.4",
     "@types/node": "^20.14.10",
     "cross-env": "^7.0.3",
-    "dotenv": "^16.4.5",
     "fs-extra": "^11.2.0",
-    "module-alias": "^2.2.3",
     "nodemon": "^3.1.4",
-    "ts-node": "^10.9.2"
-  },
-  "_moduleAliases": {
-    "@": "./src"
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0"
   }
 }

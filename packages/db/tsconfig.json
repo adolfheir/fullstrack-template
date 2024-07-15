@@ -1,6 +1,7 @@
 {
   "extends": "@fullstrack/tsconfig/tsconfig.node.json",
   "compilerOptions": {
+    "composite": false, // 禁用项目的增量编译
     "baseUrl": "src",
     "outDir": "dist"
   },

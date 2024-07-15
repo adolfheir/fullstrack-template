@@ -3,7 +3,7 @@ import { fastifyTRPCPlugin } from '@trpc/server/adapters/fastify';
 import fastify from 'fastify';
 import pino from 'pino';
 import pretty from 'pino-pretty';
-import { env } from './constants/index';
+import { env } from '@/constants/index';
 import { appRouter } from './routers';
 import { createContext } from './routers/context';
 

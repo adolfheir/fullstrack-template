@@ -1,17 +1,20 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
-    "db:generate": {
+    "@fullstrack/db#generate": {
       "inputs": ["packages/db/prisma/schema.prisma"],
-      "outputs": ["packages/db/src/generated"]
+      "outputs": ["packages/db/src/generated/**"]
+    },
+    "@fullstrack/db#build": {
+      "dependsOn": ["@fullstrack/db#generate"],
+      "inputs": ["packages/db/prisma/src/**"],
+      "outputs": ["packages/db/prisma/dist/**"]
     },
     "dev": {
-      "dependsOn": ["db:generate"],
-      "cache": false,
       "persistent": true
     },
     "build": {
-      "dependsOn": ["db:generate", "^build"],
+      "dependsOn": ["@fullstrack/db#build", "^build"],
       "cache": false
     }
   }

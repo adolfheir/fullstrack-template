@@ -5,24 +5,25 @@
   "keywords": [],
   "license": "ISC",
   "author": "",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
   "types": "./src/index.ts",
   "scripts": {
-    "build": "tsc -b",
-    "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev --name",
-    "db:seed": "ts-node ./prisma/seed.ts",
-    "dev": "prisma studio --port 5556 --browser=none",
-    "prisma": "prisma"
+    "build": "pnpm with-env tsc -b",
+    "generate": "pnpm with-env prisma generate",
+    "db:migrate": "pnpm with-env prisma migrate dev --name",
+    "db:seed": "pnpm with-env ts-node ./prisma/seed.ts",
+    "dev": "pnpm with-env prisma studio --port 5556 --browser=none",
+    "prisma": "pnpm with-env prisma",
+    "with-env": "dotenvx run --env-file=../../.env --"
   },
   "dependencies": {
     "@prisma/client": "^5.16.1",
     "bcryptjs": "^2.4.3"
   },
   "devDependencies": {
+    "@dotenvx/dotenvx": "^1.6.2",
     "@fullstrack/tsconfig": "workspace:^",
     "@types/node": "^20.14.10",
-    "dotenv": "^16.4.5",
     "prisma": "^5.16.2",
     "ts-node": "^10.9.2"
   }

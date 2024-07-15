@@ -1,7 +1,7 @@
 {
   "ext": "ts,json",
   "execMap": {
-    "ts": "node --inspect --require ts-node/register"
+    "ts": "node --inspect --require ts-node/register  --require ./tsconfig-paths-bootstrap "
   },
   "watch": ["./src"]
 }

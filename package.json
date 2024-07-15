@@ -11,7 +11,7 @@
     "build": "turbo run build --env-mode=loose",
     "clean": "rm -rf ./node_modules && pnpm -r exec rm -rf ./node_modules .turbo",
     "clean:turbo": " pnpm -r exec rm -rf .turbo",
-    "dev": "DO_NOT_TRACK=1 && turbo run dev --filter web --env-mode=loose",
+    "dev": "turbo run dev --env-mode=loose ",
     "prettier": "prettier --config ./prettier.config.js  --write .",
     "taze": "pnpm -r exec taze major --interactive false --write false --install false"
   },
